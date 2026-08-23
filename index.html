@@ -211,7 +211,7 @@
         }
 
         .about-container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
         }
 
@@ -219,18 +219,29 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 2rem;
+            text-align: center;
         }
 
         .about h2 span {
             color: #3b82f6;
         }
 
-        .about p {
+        .about-content {
+            background: #111;
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid #222;
+        }
+
+        .about-content p {
             color: #94a3b8;
             font-size: 1.1rem;
             line-height: 1.8;
-            margin-bottom: 2rem;
-            max-width: 800px;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content strong {
+            color: #fff;
         }
 
         /* Services Section */
@@ -264,106 +275,40 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 1.5rem;
         }
 
-        .service-card {
+        .service-item {
             background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #222;
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            border-color: #3b82f6;
-            transform: translateY(-5px);
-        }
-
-        .service-card h3 {
-            color: #3b82f6;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        .service-card ul {
-            list-style: none;
-            color: #94a3b8;
-        }
-
-        .service-card ul li {
-            padding: 0.5rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .service-card ul li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #3b82f6;
-            font-weight: bold;
-        }
-
-        .tech-stack {
-            background: #1a1a1a;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #222;
-            margin-top: 2rem;
-        }
-
-        .tech-stack h3 {
-            color: #3b82f6;
-            margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-        }
-
-        .tech-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-
-        .tech-item {
-            background: #0a0a0a;
-            padding: 1rem;
+            padding: 1.5rem 2rem;
             border-radius: 8px;
-            text-align: center;
-            border: 1px solid #333;
+            border: 1px solid #222;
             transition: 0.3s;
         }
 
-        .tech-item:hover {
+        .service-item:hover {
             border-color: #3b82f6;
+            transform: translateX(5px);
         }
 
-        .tech-item strong {
-            color: #fff;
-            display: block;
-            margin-bottom: 0.5rem;
+        .service-item h3 {
+            color: #3b82f6;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
         }
 
-        .tech-item span {
+        .service-item p {
             color: #94a3b8;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        .services-cta {
-            text-align: center;
-            margin-top: 3rem;
-            padding: 2rem;
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            border-radius: 12px;
-            border: 1px solid #3b82f6;
-        }
-
-        .services-cta p {
-            color: #94a3b8;
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
+        .service-icon {
+            font-size: 1.5rem;
         }
 
         /* Projects Section */
@@ -493,8 +438,11 @@
             .nav-links {
                 display: none;
             }
-            .projects-grid, .services-grid {
+            .services-grid, .projects-grid {
                 grid-template-columns: 1fr;
+            }
+            .about-content {
+                padding: 2rem 1.5rem;
             }
         }
     </style>
@@ -542,7 +490,7 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img src="femi-photo.jpg" alt="Femi Agbaiyero">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=450&h=600&fit=crop&crop=face" alt="Femi Agbaiyero">
             </div>
         </div>
     </section>
@@ -573,69 +521,71 @@
     <section class="about" id="about">
         <div class="about-container">
             <h2>About <span>Me</span></h2>
-            <p>I've been developing websites since 2010. I specialize in building full-stack web applications using modern technologies like React, Python, and Django. My passion is creating seamless user experiences and solving complex problems with elegant code.</p>
-            <p>With expertise in both frontend and backend development, I bring ideas to life from concept to deployment. I'm committed to writing clean, maintainable code and staying up-to-date with the latest industry trends.</p>
+            <div class="about-content">
+                <p>I am a <strong>Full-Stack Developer with 3 years of programming experience</strong>, specializing in building modern websites and web applications.</p>
+                <p>I work with <strong>React, JavaScript, Python, Django, Django REST Framework, and SQL</strong> to create complete frontend and backend solutions.</p>
+                <p>I have worked on projects including <strong>real estate, restaurant, e-commerce, business platforms, and other custom web applications</strong>.</p>
+                <p>Whether you have a simple website idea or need a complete web application, <strong>I can build it from the ground up based on your requirements.</strong></p>
+                <p style="margin-bottom: 0;">I am passionate about writing clean, maintainable code and delivering seamless user experiences that solve real-world problems. My goal is to help businesses and individuals bring their ideas to life through technology.</p>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="services-container">
-            <h2>Computer <span>Programming Services</span></h2>
-            <p class="services-subtitle">I am a Full-Stack Developer with 3 years of programming experience, offering development services for individuals, students, startups, and businesses.</p>
+            <h2>My <span>Services</span></h2>
+            <p class="services-subtitle">Comprehensive web development solutions tailored to your needs</p>
             
             <div class="services-grid">
-                <div class="service-card">
-                    <h3> What I Can Do</h3>
-                    <ul>
-                        <li>Build ANY type of website or web application</li>
-                        <li>Real Estate websites and management systems</li>
-                        <li>Restaurant websites and ordering systems</li>
-                        <li>E-commerce websites and online stores</li>
-                        <li>Business and company websites</li>
-                        <li>School/student management systems</li>
-                        <li>Portfolio and personal websites</li>
-                        <li>Admin dashboards</li>
-                        <li>REST APIs and backend systems</li>
-                        <li>Database systems</li>
-                        <li>AI-powered applications</li>
-                        <li>Authentication and user systems</li>
-                        <li>Bug fixing and project improvements</li>
-                    </ul>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> Any Website & Web Application</h3>
+                    <p>I can build any type of website based on your idea and requirements.</p>
                 </div>
-                
-                <div class="service-card">
-                    <h3>💼 Experience</h3>
-                    <p style="color: #94a3b8; line-height: 1.8;">I have worked on different projects including <strong>real estate, restaurants, e-commerce, business platforms, and other custom web applications</strong>.</p>
-                    <p style="color: #94a3b8; line-height: 1.8; margin-top: 1rem;"><strong>Have an idea for a website? I can build it.</strong> Whether it is a simple personal website, business website, online store, management system, or a completely custom web application, I can develop it from the ground up.</p>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> Real Estate Websites</h3>
+                    <p>Property listings, management systems, and real estate platforms.</p>
                 </div>
-            </div>
-
-            <div class="tech-stack">
-                <h3>🛠️ Technologies I Work With</h3>
-                <div class="tech-grid">
-                    <div class="tech-item">
-                        <strong>Frontend</strong>
-                        <span>React, JavaScript, HTML, CSS</span>
-                    </div>
-                    <div class="tech-item">
-                        <strong>Backend</strong>
-                        <span>Python, Django, Django REST Framework</span>
-                    </div>
-                    <div class="tech-item">
-                        <strong>Database</strong>
-                        <span>SQL, PostgreSQL</span>
-                    </div>
-                    <div class="tech-item">
-                        <strong>Other</strong>
-                        <span>Git, GitHub, API integration, deployment</span>
-                    </div>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> E-Commerce Websites</h3>
+                    <p>Online stores, products, carts, orders, and customer systems.</p>
                 </div>
-            </div>
-
-            <div class="services-cta">
-                <p><strong>Ready to bring your idea to life? Let's work together!</strong></p>
-                <a href="#contact" class="btn-primary">Get In Touch</a>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> Restaurant Websites</h3>
+                    <p>Menus, ordering systems, reservations, and restaurant management.</p>
+                </div>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> Business Websites</h3>
+                    <p>Professional company and business websites.</p>
+                </div>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> Portfolio Websites</h3>
+                    <p>Personal portfolios and professional profiles.</p>
+                </div>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> School Management Systems</h3>
+                    <p>Student, staff, and school management platforms.</p>
+                </div>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> Admin Dashboards</h3>
+                    <p>Custom dashboards for managing users, products, records, and businesses.</p>
+                </div>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> Backend & API Development</h3>
+                    <p>Django backends, REST APIs, and database systems.</p>
+                </div>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> AI Integration</h3>
+                    <p>Adding AI features and external APIs to web applications.</p>
+                </div>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> Bug Fixing & Improvements</h3>
+                    <p>Fixing, updating, and improving existing projects.</p>
+                </div>
+                <div class="service-item">
+                    <h3><span class="service-icon"></span> Deployment & Hosting</h3>
+                    <p>Setting up and deploying websites and web applications.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -704,12 +654,12 @@
     <!-- Footer -->
     <footer id="contact">
         <div class="social-links">
-            <a href="https://github.com/SSCALEZ" target="_blank" title="GitHub">📦</a>
-            <a href="mailto:femiagbaiyerofa7@gmail.com" title="Email">️</a>
-            <a href="tel:09020526002" title="Phone">📞</a>
+            <a href="https://github.com/SSCALEZ" target="_blank" title="GitHub">GitHub</a>
+            <a href="mailto:femiagbaiyerofa7@gmail.com" title="Email">Email</a>
+            <a href="tel:09020526002" title="Phone">Phone</a>
         </div>
         <p>© 2026 Femi Agbaiyero. All rights reserved.</p>
-        <p>📧 femiagbaiyerofa7@gmail.com |  09020526002</p>
+        <p>femiagbaiyerofa7@gmail.com | 09020526002</p>
     </footer>
 
 </body>
